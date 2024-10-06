@@ -94,11 +94,13 @@ public class Main {
                     indexedFiles.forEach(System.out::println);
                     break;
                 case "0":
+                    scanner.close();
                     return;
                 default:
                     System.out.println("Unknown command");
             }
         }
+
     }
 
 }
