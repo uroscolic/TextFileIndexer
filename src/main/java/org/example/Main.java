@@ -39,7 +39,22 @@ public class Main {
 
             switch (command) {
                 case "1":
-                    System.out.println("Enter paths (Type 'exit' to stop):");
+
+                    /*
+                     * Usage example:
+                     *
+                     * C:\Users\User\Desktop\file1.txt
+                     * C:\Users\User\Desktop\file2.txt
+                     * C:\Users\User\Desktop\directory1
+                     * exit
+                     *
+                     * The above example will index files 'file1.txt',
+                     * 'file2.txt' and directory 'directory1' from the Desktop directory.
+                     *
+                     *
+                     */
+
+                    System.out.println("Enter paths (Type 'exit' to stop indexing):");
                     while(true) {
                         String path1 = scanner.nextLine();
                         if (path1.equalsIgnoreCase("exit"))
@@ -53,6 +68,17 @@ public class Main {
                     }
                     break;
                 case "2":
+                    /*
+                     * Usage example:
+                     *
+                     * Enter word to search:
+                     * car
+                     *
+                     * The above example will search for indexed files containing the word 'car'.
+                     *
+                     *
+                     */
+
                     System.out.println("Enter word to search:");
                     String word = scanner.nextLine();
                     Set<String> result = indexer.search(word);
